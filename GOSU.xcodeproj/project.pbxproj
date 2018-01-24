@@ -10,7 +10,7 @@
 		0A8F42C5C2DD4347CA10ADF8 /* Pods_GOSUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */; };
 		736B9E5F2018ABFB00CFCF79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */; };
 		736DE477201752740043D678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE476201752740043D678 /* AppDelegate.swift */; };
-		736DE479201752740043D678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE478201752740043D678 /* ViewController.swift */; };
+		736DE479201752740043D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE478201752740043D678 /* LoginViewController.swift */; };
 		736DE47C201752740043D678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736DE47A201752740043D678 /* Main.storyboard */; };
 		736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 736DE47D201752740043D678 /* GOSU.xcdatamodeld */; };
 		736DE481201752740043D678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736DE480201752740043D678 /* Assets.xcassets */; };
@@ -35,9 +35,10 @@
 		3B60598FD08A9496FF5B4601 /* Pods_GOSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70ABEB0906AF3FCEF9089C86 /* Pods-GOSUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.release.xcconfig"; sourceTree = "<group>"; };
 		736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		736B9E602018E8C100CFCF79 /* GOSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GOSU.entitlements; sourceTree = "<group>"; };
 		736DE473201752740043D678 /* GOSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736DE476201752740043D678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		736DE478201752740043D678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		736DE478201752740043D678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		736DE47B201752740043D678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		736DE47E201752740043D678 /* GOSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GOSU.xcdatamodel; sourceTree = "<group>"; };
 		736DE480201752740043D678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +105,9 @@
 		736DE475201752740043D678 /* GOSU */ = {
 			isa = PBXGroup;
 			children = (
+				736B9E602018E8C100CFCF79 /* GOSU.entitlements */,
 				736DE476201752740043D678 /* AppDelegate.swift */,
-				736DE478201752740043D678 /* ViewController.swift */,
+				736DE478201752740043D678 /* LoginViewController.swift */,
 				736DE47A201752740043D678 /* Main.storyboard */,
 				736DE480201752740043D678 /* Assets.xcassets */,
 				736DE482201752740043D678 /* LaunchScreen.storyboard */,
@@ -190,7 +192,16 @@
 				TargetAttributes = {
 					736DE472201752740043D678 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					736DE489201752760043D678 = {
 						CreatedOnToolsVersion = 9.2;
@@ -298,12 +309,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GOSU/Pods-GOSU-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -319,9 +332,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GOSU/Pods-GOSU-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,7 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */,
-				736DE479201752740043D678 /* ViewController.swift in Sources */,
+				736DE479201752740043D678 /* LoginViewController.swift in Sources */,
 				736DE477201752740043D678 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,12 +522,16 @@
 			baseConfigurationReference = 2194F61B42F4DFAD82F35408 /* Pods-GOSU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GOSU/GOSU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -522,12 +542,15 @@
 			baseConfigurationReference = 9BF13A05D1AB90876ECC7229 /* Pods-GOSU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GOSU/GOSU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
