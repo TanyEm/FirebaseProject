@@ -18,40 +18,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tu-Rn-LbC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tu-Rn-LbC">
                                 <rect key="frame" x="20" y="597" width="335" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="F18-be-Ycg"/>
+                                    <constraint firstAttribute="height" constant="50" id="cwV-m8-4wo"/>
+                                </constraints>
                                 <state key="normal" title="Use without authorization"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-ab-PlG">
-                                <rect key="frame" x="20" y="63" width="335" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-ab-PlG">
+                                <rect key="frame" x="20" y="40" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3wj-Gv-8qp"/>
+                                    <constraint firstAttribute="width" constant="335" id="ZR2-wQ-jEx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-cV-Jhe">
-                                <rect key="frame" x="95" y="127" width="185" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rF-cV-Jhe">
+                                <rect key="frame" x="95" y="120" width="185" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="4NM-6K-NPf"/>
+                                    <constraint firstAttribute="height" constant="185" id="Ler-8W-sld"/>
+                                    <constraint firstAttribute="width" constant="185" id="qAd-Dm-TRQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="185" id="tkt-Uv-jKL"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o03-c5-9dW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o03-c5-9dW">
                                 <rect key="frame" x="20" y="481" width="335" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="Rug-U9-8Ep"/>
+                                    <constraint firstAttribute="height" constant="50" id="ilj-7I-qqy"/>
+                                </constraints>
                                 <state key="normal" title="Sign in with Phone"/>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-jI-MtV" userLabel="Sign In Google Button" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-jI-MtV" userLabel="Sign In Google Button" customClass="GIDSignInButton">
                                 <rect key="frame" x="20" y="539" width="335" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="70Y-xH-hbj"/>
+                                    <constraint firstAttribute="height" constant="50" id="LIJ-fD-hVd"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o03-c5-9dW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="28b-pG-o8U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o03-c5-9dW" secondAttribute="trailing" constant="20" id="Kjh-ki-e4X"/>
+                            <constraint firstItem="1Ue-jI-MtV" firstAttribute="top" secondItem="o03-c5-9dW" secondAttribute="bottom" constant="8" id="MJy-os-fji"/>
+                            <constraint firstItem="7Tu-Rn-LbC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NgJ-8r-tf3"/>
+                            <constraint firstItem="7Tu-Rn-LbC" firstAttribute="top" secondItem="1Ue-jI-MtV" secondAttribute="bottom" constant="8" id="TIA-9V-Q4y"/>
+                            <constraint firstItem="8Jr-ab-PlG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UJ7-Ya-CKu"/>
+                            <constraint firstItem="8Jr-ab-PlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yi7-0z-VYP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ue-jI-MtV" secondAttribute="trailing" constant="20" id="ZdE-E8-tYz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Tu-Rn-LbC" secondAttribute="bottom" constant="20" id="Zoa-3M-fOa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1rF-cV-Jhe" secondAttribute="trailing" constant="95" id="bE3-gE-tQe"/>
+                            <constraint firstItem="7Tu-Rn-LbC" firstAttribute="top" secondItem="1Ue-jI-MtV" secondAttribute="bottom" constant="8" id="ccp-PN-PtG"/>
+                            <constraint firstItem="1rF-cV-Jhe" firstAttribute="top" secondItem="8Jr-ab-PlG" secondAttribute="bottom" constant="30" id="cfL-6L-CLr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Tu-Rn-LbC" secondAttribute="trailing" constant="20" id="hxj-E8-GIk"/>
+                            <constraint firstItem="1Ue-jI-MtV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jBa-5K-vtW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Jr-ab-PlG" secondAttribute="trailing" constant="20" id="nTq-yK-Lzr"/>
+                            <constraint firstItem="1Ue-jI-MtV" firstAttribute="top" secondItem="o03-c5-9dW" secondAttribute="bottom" constant="8" id="rMT-Ks-DLX"/>
+                            <constraint firstItem="1rF-cV-Jhe" firstAttribute="top" secondItem="8Jr-ab-PlG" secondAttribute="bottom" constant="30" id="wd0-lH-ej8"/>
+                            <constraint firstItem="1rF-cV-Jhe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="zfo-Nr-RPx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="tzF-uD-ur4" kind="presentation" identifier="GoogleViewSegue" id="ZWD-PE-STZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-134" y="134"/>
         </scene>
         <!--Polls-->
         <scene sceneID="7fo-z0-zuU">

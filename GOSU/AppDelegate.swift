@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-
+    var databaseRef: DatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -79,9 +80,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             // User is signed in
             print("User signed into Firabase")
+            self.databaseRef = Database.database().reference()
+
+            // Configure database
+            self.databaseRef.child("user_profiles").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                let snapshot = snapshot.value as? NSDictionary
+
+                if snapshot == nil {
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(user?.displayName)
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(user?.email)
+                }
+                // Create Segue fore signing with Google
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                self.window?.rootViewController?.performSegue(withIdentifier: "GoogleViewSegue", sender: nil)
+                
+            })
+
         }
 
     }
+
+
 
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.

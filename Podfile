@@ -8,6 +8,7 @@ target 'GOSU' do
   # Pods for GOSU
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
 pod 'GoogleSignIn'
 
   target 'GOSUTests' do
