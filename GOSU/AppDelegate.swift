@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 import GoogleSignIn
 import FirebaseDatabase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
