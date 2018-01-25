@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A8F42C5C2DD4347CA10ADF8 /* Pods_GOSUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */; };
+		734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */; };
+		734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */; };
 		736B9E5F2018ABFB00CFCF79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */; };
 		736DE477201752740043D678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE476201752740043D678 /* AppDelegate.swift */; };
 		736DE479201752740043D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE478201752740043D678 /* LoginViewController.swift */; };
@@ -34,6 +36,8 @@
 		3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOSUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B60598FD08A9496FF5B4601 /* Pods_GOSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70ABEB0906AF3FCEF9089C86 /* Pods-GOSUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.release.xcconfig"; sourceTree = "<group>"; };
+		734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		736B9E602018E8C100CFCF79 /* GOSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GOSU.entitlements; sourceTree = "<group>"; };
 		736DE473201752740043D678 /* GOSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				736B9E602018E8C100CFCF79 /* GOSU.entitlements */,
 				736DE476201752740043D678 /* AppDelegate.swift */,
 				736DE478201752740043D678 /* LoginViewController.swift */,
+				734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */,
+				734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */,
 				736DE47A201752740043D678 /* Main.storyboard */,
 				736DE480201752740043D678 /* Assets.xcassets */,
 				736DE482201752740043D678 /* LaunchScreen.storyboard */,
@@ -371,9 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */,
 				736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */,
 				736DE479201752740043D678 /* LoginViewController.swift in Sources */,
 				736DE477201752740043D678 /* AppDelegate.swift in Sources */,
+				734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

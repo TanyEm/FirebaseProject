@@ -12,14 +12,15 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
+//        GIDSignIn.sharedInstance().signIn()
 
         // Configure the sign-in button look/feel
-        // ...
+        googleLoginButton.style = .wide
     }
 
     override func didReceiveMemoryWarning() {
