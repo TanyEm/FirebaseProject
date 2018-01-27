@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 if snapshot == nil {
                     self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(user?.displayName)
                     self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(user?.email)
-                    self.databaseRef.child("user_profiles").child(user!.uid).child("phone_num").setValue("nil")
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("phone_num").setValue("")
                 }
                 // Create Segue fore signing with Google
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

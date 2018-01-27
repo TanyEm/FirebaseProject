@@ -172,7 +172,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="4wn-js-jNr"/>
                                     <constraint firstAttribute="height" constant="50" id="91V-F9-JfR"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="E7a-4X-XBg"/>
-                                    <constraint firstAttribute="width" constant="335" id="k65-ka-vig"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="k65-ka-vig"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="335" id="mr9-Ax-guR"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -180,8 +180,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72v-rt-2LG">
-                                <rect key="frame" x="147" y="379" width="80" height="30"/>
-                                <state key="normal" title="Entry code"/>
+                                <rect key="frame" x="131" y="378" width="112" height="30"/>
+                                <state key="normal" title="Get entry code"/>
                                 <connections>
                                     <action selector="entryCode:" destination="cUx-WH-iQ9" eventType="touchUpInside" id="ZGv-mI-goN"/>
                                 </connections>
@@ -189,13 +189,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="72v-rt-2LG" firstAttribute="top" secondItem="NxK-8v-eNm" secondAttribute="bottom" constant="19" id="0Az-Uv-swh"/>
                             <constraint firstItem="NxK-8v-eNm" firstAttribute="centerX" secondItem="7cu-WS-K9l" secondAttribute="centerX" id="C4L-R8-1Ew"/>
-                            <constraint firstItem="72v-rt-2LG" firstAttribute="centerX" secondItem="NxK-8v-eNm" secondAttribute="centerX" id="Hdw-8T-Rgv"/>
                             <constraint firstItem="NxK-8v-eNm" firstAttribute="centerY" secondItem="7cu-WS-K9l" secondAttribute="centerY" id="O1P-CX-2qT"/>
-                            <constraint firstItem="NxK-8v-eNm" firstAttribute="leading" secondItem="E7H-gG-fii" secondAttribute="leading" constant="20" id="XIZ-QZ-pFr"/>
-                            <constraint firstItem="72v-rt-2LG" firstAttribute="top" secondItem="NxK-8v-eNm" secondAttribute="bottom" constant="20" id="nP7-V9-kZC"/>
-                            <constraint firstItem="72v-rt-2LG" firstAttribute="leading" secondItem="E7H-gG-fii" secondAttribute="leading" constant="147" id="o1T-P7-IZc"/>
-                            <constraint firstItem="E7H-gG-fii" firstAttribute="trailing" secondItem="NxK-8v-eNm" secondAttribute="trailing" constant="20" id="r3M-YW-BrT"/>
+                            <constraint firstItem="NxK-8v-eNm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E7H-gG-fii" secondAttribute="leading" id="XIZ-QZ-pFr"/>
+                            <constraint firstItem="72v-rt-2LG" firstAttribute="centerX" secondItem="NxK-8v-eNm" secondAttribute="centerX" id="jDy-as-OHS"/>
+                            <constraint firstItem="E7H-gG-fii" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NxK-8v-eNm" secondAttribute="trailing" id="r3M-YW-BrT"/>
+                            <constraint firstItem="72v-rt-2LG" firstAttribute="leading" secondItem="E7H-gG-fii" secondAttribute="leading" constant="131" id="zN3-H2-vaN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E7H-gG-fii"/>
                     </view>
@@ -216,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-D5-LBo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Entry code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Wp-D5-LBo">
                                 <rect key="frame" x="20" y="308.5" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="FgS-Wz-wrN"/>
@@ -232,7 +232,6 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="BLQ-Bc-LpP"/>
                                     <constraint firstAttribute="height" constant="30" id="hM1-iE-2ss"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="Login:" destination="FJ8-FQ-VCY" eventType="touchUpInside" id="QSG-nb-awJ"/>

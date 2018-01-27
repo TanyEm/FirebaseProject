@@ -37,8 +37,8 @@ class CodeVerificationViewController: UIViewController {
                     let snapshot = snapshot.value as? NSDictionary
 
                     if snapshot == nil {
-                        self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue("nil")
-                        self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue("nil")
+                        self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue("")
+                        self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue("")
                         self.databaseRef.child("user_profiles").child(user!.uid).child("phone_num").setValue(user?.phoneNumber)
                     }
                     // Create Segue fore signing with phone number
