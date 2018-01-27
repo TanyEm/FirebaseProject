@@ -24,9 +24,12 @@ class SettingsViewController: UIViewController {
             try firebaseAuth.signOut()
 
             dismiss(animated: true, completion: nil)
+            print("signout")
+            //need to get a number
+            //print("User: \(String(describing: user?.phoneNumber))")
         }
         catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+            print ("Error signing out: \(signOutError.localizedDescription)")
         }
     }
 

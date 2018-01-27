@@ -8,8 +8,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class CodeVerificationViewController: UIViewController {
+
+    var databaseRef: DatabaseReference!
+
 
     @IBOutlet weak var codeText: UITextField!
     
@@ -27,7 +31,20 @@ class CodeVerificationViewController: UIViewController {
                 print("Phone number: \(String(describing: user?.phoneNumber))")
                 let userInfo = user?.providerData[0]
                 print("Provider ID: \(String(describing: userInfo?.providerID))")
-                self.performSegue(withIdentifier: "PhoneViewSegue", sender: Any?.self)
+                
+                self.databaseRef = Database.database().reference()
+                self.databaseRef.child("user_profiles").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                    let snapshot = snapshot.value as? NSDictionary
+
+                    if snapshot == nil {
+                        self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue("nil")
+                        self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue("nil")
+                        self.databaseRef.child("user_profiles").child(user!.uid).child("phone_num").setValue(user?.phoneNumber)
+                    }
+                    // Create Segue fore signing with phone number
+                    self.performSegue(withIdentifier: "PhoneViewSegue", sender: Any?.self)
+                    print("User: \(String(describing: user?.phoneNumber))")
+                })
             }
         }
     }
