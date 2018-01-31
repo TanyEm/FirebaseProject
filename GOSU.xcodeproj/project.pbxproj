@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A8F42C5C2DD4347CA10ADF8 /* Pods_GOSUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */; };
+		7316EBAD2021E6AD0032342E /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316EBAC2021E6AD0032342E /* CategoriesData.swift */; };
+		7316EBAF2021FA690032342E /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */; };
 		734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */; };
 		734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */; };
 		734D8368201A71F5003C6FF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8367201A71F5003C6FF1 /* SettingsViewController.swift */; };
@@ -19,7 +21,7 @@
 		736DE481201752740043D678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736DE480201752740043D678 /* Assets.xcassets */; };
 		736DE484201752740043D678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736DE482201752740043D678 /* LaunchScreen.storyboard */; };
 		736DE48F201752760043D678 /* GOSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE48E201752760043D678 /* GOSUTests.swift */; };
-		73C074B2201F6553002DD5D5 /* ArticleCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C074B1201F6553002DD5D5 /* ArticleCategoriesTableViewController.swift */; };
+		73C074B2201F6553002DD5D5 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */; };
 		98CAF1C3861EF2A66E4D3649 /* Pods_GOSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B60598FD08A9496FF5B4601 /* Pods_GOSU.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOSUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B60598FD08A9496FF5B4601 /* Pods_GOSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GOSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70ABEB0906AF3FCEF9089C86 /* Pods-GOSUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.release.xcconfig"; sourceTree = "<group>"; };
+		7316EBAC2021E6AD0032342E /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
+		7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8367201A71F5003C6FF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +58,7 @@
 		736DE48A201752760043D678 /* GOSUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOSUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736DE48E201752760043D678 /* GOSUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSUTests.swift; sourceTree = "<group>"; };
 		736DE490201752760043D678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73C074B1201F6553002DD5D5 /* ArticleCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		9BF13A05D1AB90876ECC7229 /* Pods-GOSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSU/Pods-GOSU.release.xcconfig"; sourceTree = "<group>"; };
 		D4C94AD365419AA05F0BC359 /* Pods-GOSUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7316EBAA2021E60A0032342E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				736DE478201752740043D678 /* LoginViewController.swift */,
+				734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */,
+				734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */,
+				734D8367201A71F5003C6FF1 /* SettingsViewController.swift */,
+				73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */,
+				7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7316EBAB2021E6420032342E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7316EBAC2021E6AD0032342E /* CategoriesData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		736DE46A201752730043D678 = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +138,11 @@
 		736DE475201752740043D678 /* GOSU */ = {
 			isa = PBXGroup;
 			children = (
+				7316EBAB2021E6420032342E /* Data */,
+				7316EBAA2021E60A0032342E /* Controllers */,
 				736B9E602018E8C100CFCF79 /* GOSU.entitlements */,
 				736DE476201752740043D678 /* AppDelegate.swift */,
-				736DE478201752740043D678 /* LoginViewController.swift */,
-				734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */,
-				734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */,
 				736DE47A201752740043D678 /* Main.storyboard */,
-				734D8367201A71F5003C6FF1 /* SettingsViewController.swift */,
-				73C074B1201F6553002DD5D5 /* ArticleCategoriesTableViewController.swift */,
 				736DE480201752740043D678 /* Assets.xcassets */,
 				736DE482201752740043D678 /* LaunchScreen.storyboard */,
 				736DE485201752740043D678 /* Info.plist */,
@@ -384,12 +406,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */,
-				73C074B2201F6553002DD5D5 /* ArticleCategoriesTableViewController.swift in Sources */,
+				73C074B2201F6553002DD5D5 /* CategoriesTableViewController.swift in Sources */,
 				736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */,
 				736DE479201752740043D678 /* LoginViewController.swift in Sources */,
 				736DE477201752740043D678 /* AppDelegate.swift in Sources */,
 				734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */,
 				734D8368201A71F5003C6FF1 /* SettingsViewController.swift in Sources */,
+				7316EBAD2021E6AD0032342E /* CategoriesData.swift in Sources */,
+				7316EBAF2021FA690032342E /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,18 +7,55 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class ArticleCategoriesTableViewController: UITableViewController {
+class CategoriesTableViewController: UITableViewController {
+
+    //defining firebase reference var
+    var refCategories: DatabaseReference?
+    //list to store all the categories
+    var categoriesList = [CategoriesData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        refCategories = Database.database().reference().child("categories")
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //observing the data changes
+        refCategories?.observe(DataEventType.value, with: { (snapshot) -> Void in
+
+            print(snapshot)
+            if snapshot.childrenCount > 0 {
+                //clearing the list
+                self.categoriesList.removeAll()
+
+                //iterating through all the values
+                for categories in snapshot.children.allObjects as! [DataSnapshot] {
+                    //getting values
+                    let categoryObject = categories.value as? [String: AnyObject]
+                    print(categoryObject)
+                    let categoryName  = categoryObject?["name"]
+                    let categoryDescription = categoryObject?["description"]
+                    //let categoryImage = categoryObject?["categoryImage"]
+
+                    //creating artist object with model and fetched values
+                    let category = CategoriesData(name: categoryName as! String?,
+                                                  description: categoryDescription as! String?)
+
+                    print(category)
+
+                    //appending it to list
+                    self.categoriesList.append(category)
+                }
+                
+                //reloading the tableview
+                self.tableView.reloadData()
+
+            }
+        })
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,25 +64,29 @@ class ArticleCategoriesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return categoriesList.count
     }
 
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
 
         // Configure the cell...
+        //the artist object
+        let category: CategoriesData
+
+        //getting the artist of selected position
+        category = categoriesList[indexPath.row]
+
+        //adding values to labels
+        cell.categoryName.text = category.name
+        cell.categoryDescription.text = category.description
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
