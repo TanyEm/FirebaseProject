@@ -8,18 +8,32 @@
 
 import Foundation
 import FirebaseDatabase
+import SwiftyJSON
+
 
 class CategoriesData {
 
     var name: String?
-    //var image: String?
+    var pictureURL: String?
     var description: String?
+    var id: Int?
+
+    func setCategories(_ json: JSON) {
+        self.name = json["name"].string
+        self.description = json["description"].string
+        self.id = json["id"].int
+
+        let image = json["picture"].dictionary
+        let imageData = image?["data"]?.dictionary
+        self.pictureURL = imageData?["url"]?.string
+    }
 
 
-    init(name: String?, description: String?){
+    init(name: String?, description: String?, pictureURL: String?, id: Int?){
         self.name = name
-        //self.image = image
+        self.pictureURL = pictureURL
         self.description = description
+        self.id = id
     }
 
 }

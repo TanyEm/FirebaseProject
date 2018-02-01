@@ -34,16 +34,16 @@ class CategoriesTableViewController: UITableViewController {
                 for categories in snapshot.children.allObjects as! [DataSnapshot] {
                     //getting values
                     let categoryObject = categories.value as? [String: AnyObject]
-                    print(categoryObject)
                     let categoryName  = categoryObject?["name"]
                     let categoryDescription = categoryObject?["description"]
-                    //let categoryImage = categoryObject?["categoryImage"]
+                    let categoryImage = categoryObject?["image"]
+                    let categoriID = categoryObject?["id"]
 
                     //creating artist object with model and fetched values
                     let category = CategoriesData(name: categoryName as! String?,
-                                                  description: categoryDescription as! String?)
-
-                    print(category)
+                                                  description: categoryDescription as! String?,
+                                                  pictureURL: categoryImage as! String?,
+                                                  id: categoriID as! Int?)
 
                     //appending it to list
                     self.categoriesList.append(category)
@@ -83,6 +83,11 @@ class CategoriesTableViewController: UITableViewController {
         //adding values to labels
         cell.categoryName.text = category.name
         cell.categoryDescription.text = category.description
+        cell.categoryImage.image = try! UIImage(data: Data(contentsOf: URL(string: category.pictureURL!)!))
+        cell.categoryImage.layer.cornerRadius = 70 / 2
+        cell.categoryImage.layer.borderWidth = 1.0
+        cell.categoryImage.layer.borderColor = UIColor.white.cgColor
+        cell.categoryImage.clipsToBounds = true
 
         return cell
     }
