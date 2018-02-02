@@ -84,7 +84,7 @@ class CategoriesTableViewController: UITableViewController {
         cell.categoryName.text = category.name
         cell.categoryDescription.text = category.description
         cell.categoryImage.image = try! UIImage(data: Data(contentsOf: URL(string: category.pictureURL!)!))
-        cell.categoryImage.layer.cornerRadius = 70 / 2
+        cell.categoryImage.layer.cornerRadius = 90 / 2
         cell.categoryImage.layer.borderWidth = 1.0
         cell.categoryImage.layer.borderColor = UIColor.white.cgColor
         cell.categoryImage.clipsToBounds = true
