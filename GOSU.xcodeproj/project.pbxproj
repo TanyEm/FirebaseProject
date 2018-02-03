@@ -10,6 +10,9 @@
 		0A8F42C5C2DD4347CA10ADF8 /* Pods_GOSUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3600BEC77A99B617BED37191 /* Pods_GOSUTests.framework */; };
 		7316EBAD2021E6AD0032342E /* CategoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316EBAC2021E6AD0032342E /* CategoriesData.swift */; };
 		7316EBAF2021FA690032342E /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */; };
+		73272FCF20260D1A00299F0E /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73272FCE20260D1900299F0E /* ArticlesTableViewController.swift */; };
+		73272FD120260D4500299F0E /* ArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73272FD020260D4500299F0E /* ArticlesTableViewCell.swift */; };
+		73272FD320260D6C00299F0E /* ArticlesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73272FD220260D6C00299F0E /* ArticlesData.swift */; };
 		734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */; };
 		734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */; };
 		734D8368201A71F5003C6FF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8367201A71F5003C6FF1 /* SettingsViewController.swift */; };
@@ -42,6 +45,9 @@
 		70ABEB0906AF3FCEF9089C86 /* Pods-GOSUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.release.xcconfig"; sourceTree = "<group>"; };
 		7316EBAC2021E6AD0032342E /* CategoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesData.swift; sourceTree = "<group>"; };
 		7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		73272FCE20260D1900299F0E /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
+		73272FD020260D4500299F0E /* ArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		73272FD220260D6C00299F0E /* ArticlesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesData.swift; sourceTree = "<group>"; };
 		734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8367201A71F5003C6FF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 				734D8367201A71F5003C6FF1 /* SettingsViewController.swift */,
 				73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */,
 				7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */,
+				73272FCE20260D1900299F0E /* ArticlesTableViewController.swift */,
+				73272FD020260D4500299F0E /* ArticlesTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				7316EBAC2021E6AD0032342E /* CategoriesData.swift */,
+				73272FD220260D6C00299F0E /* ArticlesData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -407,15 +416,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73272FCF20260D1A00299F0E /* ArticlesTableViewController.swift in Sources */,
 				734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */,
 				73C074B2201F6553002DD5D5 /* CategoriesTableViewController.swift in Sources */,
 				736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */,
+				73272FD320260D6C00299F0E /* ArticlesData.swift in Sources */,
 				736DE479201752740043D678 /* LoginViewController.swift in Sources */,
 				736DE477201752740043D678 /* AppDelegate.swift in Sources */,
 				734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */,
 				734D8368201A71F5003C6FF1 /* SettingsViewController.swift in Sources */,
 				7316EBAD2021E6AD0032342E /* CategoriesData.swift in Sources */,
 				7316EBAF2021FA690032342E /* CategoryTableViewCell.swift in Sources */,
+				73272FD120260D4500299F0E /* ArticlesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

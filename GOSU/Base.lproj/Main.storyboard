@@ -198,7 +198,7 @@
                                     <outlet property="categoryDescription" destination="8DF-N6-zEp" id="uBn-de-ho2"/>
                                     <outlet property="categoryImage" destination="kBs-iY-zJL" id="Woi-58-qHd"/>
                                     <outlet property="categoryName" destination="woJ-x6-uza" id="1bD-sT-KlN"/>
-                                    <segue destination="jI1-ad-gRF" kind="show" id="S0b-My-Sui"/>
+                                    <segue destination="jI1-ad-gRF" kind="show" identifier="ArticlesSegue" id="S0b-My-Sui"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -216,13 +216,13 @@
         <!--Root View Controller-->
         <scene sceneID="DjB-t1-J9P">
             <objects>
-                <tableViewController id="jI1-ad-gRF" sceneMemberID="viewController">
+                <tableViewController id="jI1-ad-gRF" customClass="ArticlesTableViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="acR-6a-ZNx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="z94-UJ-sIC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="108" id="z94-UJ-sIC" customClass="ArticlesTableViewCell" customModule="GOSU" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z94-UJ-sIC" id="xbM-IF-acc">
@@ -263,6 +263,11 @@
                                         <constraint firstItem="gM2-g6-8Ws" firstAttribute="leading" secondItem="xbM-IF-acc" secondAttribute="leading" constant="8" id="xfO-Ul-Bs4"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleDescription" destination="Mv6-Xd-mfm" id="bUy-uL-HMy"/>
+                                    <outlet property="articleImage" destination="gM2-g6-8Ws" id="6Wj-O5-npt"/>
+                                    <outlet property="articleTitle" destination="804-xJ-oDZ" id="j0O-l6-ue1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
