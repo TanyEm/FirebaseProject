@@ -10,8 +10,13 @@ import UIKit
 
 class ArticlesTableViewController: UITableViewController {
 
+    var countryID = 0
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("wow\(countryID)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

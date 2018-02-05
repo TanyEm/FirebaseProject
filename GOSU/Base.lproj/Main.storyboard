@@ -198,7 +198,7 @@
                                     <outlet property="categoryDescription" destination="8DF-N6-zEp" id="uBn-de-ho2"/>
                                     <outlet property="categoryImage" destination="kBs-iY-zJL" id="Woi-58-qHd"/>
                                     <outlet property="categoryName" destination="woJ-x6-uza" id="1bD-sT-KlN"/>
-                                    <segue destination="jI1-ad-gRF" kind="show" identifier="ArticlesSegue" id="S0b-My-Sui"/>
+                                    <segue destination="jI1-ad-gRF" kind="show" identifier="ShowArticlesSegue" id="S0b-My-Sui"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
