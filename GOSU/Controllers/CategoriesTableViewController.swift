@@ -25,7 +25,6 @@ class CategoriesTableViewController: UITableViewController {
         //observing the data changes
         refCategories?.observe(DataEventType.value, with: { (snapshot) -> Void in
 
-            print(snapshot)
             if snapshot.childrenCount > 0 {
                 //clearing the list
                 self.categoriesList.removeAll()
@@ -37,13 +36,13 @@ class CategoriesTableViewController: UITableViewController {
                     let categoryName  = categoryObject?["name"]
                     let categoryDescription = categoryObject?["description"]
                     let categoryImage = categoryObject?["image"]
-                    let categoriID = categoryObject?["id"]
+                    let categoryID = categoryObject?["id"]
 
                     //creating artist object with model and fetched values
                     let category = CategoriesData(name: categoryName as! String?,
                                                   description: categoryDescription as! String?,
                                                   pictureURL: categoryImage as! String?,
-                                                  id: categoriID as! Int?)
+                                                  id: categoryID as! Int?)
 
                     //appending it to list
                     self.categoriesList.append(category)
@@ -84,7 +83,7 @@ class CategoriesTableViewController: UITableViewController {
         cell.categoryName.text = category.name
         cell.categoryDescription.text = category.description
         cell.categoryImage.image = try! UIImage(data: Data(contentsOf: URL(string: category.pictureURL!)!))
-        cell.categoryImage.layer.cornerRadius = 70 / 2
+        cell.categoryImage.layer.cornerRadius = 90 / 2
         cell.categoryImage.layer.borderWidth = 1.0
         cell.categoryImage.layer.borderColor = UIColor.white.cgColor
         cell.categoryImage.clipsToBounds = true
@@ -92,50 +91,17 @@ class CategoriesTableViewController: UITableViewController {
         return cell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let selectedCategory: CategoriesData
+            selectedCategory = categoriesList[indexPath.row]
+            let articlesVC = segue.destination as! ArticlesTableViewController
+            articlesVC.categoryID = selectedCategory.id!
+        }
     }
-    */
-
 }
