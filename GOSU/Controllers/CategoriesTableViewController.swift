@@ -25,7 +25,6 @@ class CategoriesTableViewController: UITableViewController {
         //observing the data changes
         refCategories?.observe(DataEventType.value, with: { (snapshot) -> Void in
 
-            print(snapshot)
             if snapshot.childrenCount > 0 {
                 //clearing the list
                 self.categoriesList.removeAll()
@@ -102,8 +101,7 @@ class CategoriesTableViewController: UITableViewController {
             let selectedCategory: CategoriesData
             selectedCategory = categoriesList[indexPath.row]
             let articlesVC = segue.destination as! ArticlesTableViewController
-            articlesVC.countryID = selectedCategory.id!
-            print(articlesVC.countryID)
+            articlesVC.categoryID = selectedCategory.id!
         }
     }
 }

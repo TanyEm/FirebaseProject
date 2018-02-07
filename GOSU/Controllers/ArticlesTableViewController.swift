@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class ArticlesTableViewController: UITableViewController {
 
-    var countryID = 0
+    var categoryID = 0
     var refArticles: DatabaseReference?
     var articlesList = [ArticlesData]()
 
@@ -24,7 +24,6 @@ class ArticlesTableViewController: UITableViewController {
         //observing the data changes
         refArticles?.observe(DataEventType.value, with: { (snapshot) -> Void in
 
-            print(snapshot)
             if snapshot.childrenCount > 0 {
                 //clearing the list
                 self.articlesList.removeAll()
@@ -36,20 +35,23 @@ class ArticlesTableViewController: UITableViewController {
                     let articleTitle  = articleObject?["title"]
                     let articleDescription = articleObject?["description"]
                     let articleImage = articleObject?["image"]
-                    let categoryID = articleObject?["id"]
+                    let categoryID = articleObject?["category_id"]
                     let articleBody = articleObject?["body"]
                     let articleVideo = articleObject?["video_link"]
 
-                    //creating artist object with model and fetched values
-                    let category = ArticlesData(title: articleTitle as! String?,
-                                                description: articleDescription as! String?,
-                                                pictureURL: articleImage as! String?,
-                                                category_id: categoryID as! Int?,
-                                                body: articleBody as! String?,
-                                                video_link: articleVideo as! String?)
 
-                    //appending it to list
-                    self.articlesList.append(category)
+                    if Int(truncating: categoryID as! NSNumber) == self.categoryID {
+                        //creating artist object with model and fetched values
+                        let category = ArticlesData(title: articleTitle as! String?,
+                                                    description: articleDescription as! String?,
+                                                    pictureURL: articleImage as! String?,
+                                                    category_id: categoryID as! Int?,
+                                                    body: articleBody as! String?,
+                                                    video_link: articleVideo as! String?)
+
+                        //appending it to list
+                        self.articlesList.append(category)
+                    }
                 }
 
                 //reloading the tableview
