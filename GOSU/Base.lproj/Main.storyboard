@@ -98,7 +98,7 @@
         <!--Polls-->
         <scene sceneID="7fo-z0-zuU">
             <objects>
-                <viewController title="Polls" id="EXB-JP-GZP" customClass="CategoriesViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Polls" id="EXB-JP-GZP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Qx-RP-ydA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
