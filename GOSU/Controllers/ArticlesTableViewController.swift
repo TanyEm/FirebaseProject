@@ -23,7 +23,7 @@ class ArticlesTableViewController: UITableViewController {
 
         //observing the data changes
         refArticles?.observe(DataEventType.value, with: { (snapshot) -> Void in
-
+            print(snapshot)
             if snapshot.childrenCount > 0 {
                 //clearing the list
                 self.articlesList.removeAll()
@@ -38,6 +38,7 @@ class ArticlesTableViewController: UITableViewController {
                     let categoryID = articleObject?["category_id"]
                     let articleBody = articleObject?["body"]
                     let articleVideo = articleObject?["video_link"]
+                    let articleID = articleObject?["id"]
 
 
                     if Int(truncating: categoryID as! NSNumber) == self.categoryID {
@@ -47,7 +48,8 @@ class ArticlesTableViewController: UITableViewController {
                                                     pictureURL: articleImage as! String?,
                                                     category_id: categoryID as! Int?,
                                                     body: articleBody as! String?,
-                                                    video_link: articleVideo as! String?)
+                                                    video_link: articleVideo as! String?,
+                                                    id: articleID as! Int?)
 
                         //appending it to list
                         self.articlesList.append(category)
@@ -84,24 +86,30 @@ class ArticlesTableViewController: UITableViewController {
         //adding values to labels
         cell.articleTitle.text = article.title
         cell.articleDescription.text = article.description
-        cell.articleImage.image = try! UIImage(data: Data(contentsOf: URL(string: article.pictureURL!)!))
-        cell.articleImage.layer.cornerRadius = 90 / 2
-        cell.articleImage.layer.borderWidth = 1.0
-        cell.articleImage.layer.borderColor = UIColor.white.cgColor
-        cell.articleImage.clipsToBounds = true
+        if article.pictureURL != "" {
+            cell.articleImage.image = try! UIImage(data: Data(contentsOf: URL(string: article.pictureURL!)!))
+            cell.articleImage.layer.cornerRadius = 90 / 2
+            cell.articleImage.layer.borderWidth = 1.0
+            cell.articleImage.layer.borderColor = UIColor.white.cgColor
+            cell.articleImage.clipsToBounds = true
+        }
 
         return cell
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+            let selectedArticle: ArticlesData
+            selectedArticle = articlesList[indexPath.row]
+            let detailArticleVC = segue.destination as! DetailArticleViewController
+            detailArticleVC.articlesID = selectedArticle.id!
+        }
     }
-    */
-
 }

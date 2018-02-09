@@ -25,6 +25,7 @@
 		736DE484201752740043D678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736DE482201752740043D678 /* LaunchScreen.storyboard */; };
 		736DE48F201752760043D678 /* GOSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE48E201752760043D678 /* GOSUTests.swift */; };
 		73C074B2201F6553002DD5D5 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */; };
+		73E92E09202B58E30071E9E2 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92E08202B58E30071E9E2 /* DetailArticleViewController.swift */; };
 		98CAF1C3861EF2A66E4D3649 /* Pods_GOSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B60598FD08A9496FF5B4601 /* Pods_GOSU.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		736DE48E201752760043D678 /* GOSUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSUTests.swift; sourceTree = "<group>"; };
 		736DE490201752760043D678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		73E92E08202B58E30071E9E2 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		9BF13A05D1AB90876ECC7229 /* Pods-GOSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-GOSU/Pods-GOSU.release.xcconfig"; sourceTree = "<group>"; };
 		D4C94AD365419AA05F0BC359 /* Pods-GOSUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GOSUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GOSUTests/Pods-GOSUTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */,
 				7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */,
 				73272FCE20260D1900299F0E /* ArticlesTableViewController.swift */,
+				73E92E08202B58E30071E9E2 /* DetailArticleViewController.swift */,
 				73272FD020260D4500299F0E /* ArticlesTableViewCell.swift */,
 			);
 			path = Controllers;
@@ -419,6 +422,7 @@
 				73272FCF20260D1A00299F0E /* ArticlesTableViewController.swift in Sources */,
 				734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */,
 				73C074B2201F6553002DD5D5 /* CategoriesTableViewController.swift in Sources */,
+				73E92E09202B58E30071E9E2 /* DetailArticleViewController.swift in Sources */,
 				736DE47F201752740043D678 /* GOSU.xcdatamodeld in Sources */,
 				73272FD320260D6C00299F0E /* ArticlesData.swift in Sources */,
 				736DE479201752740043D678 /* LoginViewController.swift in Sources */,
@@ -587,7 +591,7 @@
 				DEVELOPMENT_TEAM = 33AJ5D27AP;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yops.gosu.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -607,7 +611,7 @@
 				DEVELOPMENT_TEAM = 33AJ5D27AP;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yops.gosu.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

@@ -1,6 +1,0 @@
-framework module Pods_GOSUTests {
-  umbrella header "Pods-GOSUTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
