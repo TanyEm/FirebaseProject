@@ -16,9 +16,17 @@ class CategoriesTableViewController: UITableViewController {
     var refCategories: DatabaseReference?
     //list to store all the categories
     var categoriesList = [CategoriesData]()
+    let spinner = UIActivityIndicatorView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        spinner.hidesWhenStopped = true
+        spinner.center = tableView.center
+        spinner.activityIndicatorViewStyle = .gray
+        spinner.startAnimating()
+        tableView.addSubview(spinner)
 
         refCategories = Database.database().reference().child("categories")
 
@@ -47,7 +55,9 @@ class CategoriesTableViewController: UITableViewController {
                     //appending it to list
                     self.categoriesList.append(category)
                 }
-                
+
+                self.spinner.stopAnimating()
+                self.spinner.removeFromSuperview()
                 //reloading the tableview
                 self.tableView.reloadData()
 
