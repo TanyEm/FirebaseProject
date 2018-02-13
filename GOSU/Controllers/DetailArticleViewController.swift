@@ -14,7 +14,7 @@ class DetailArticleViewController: UIViewController {
     var refArticles: DatabaseReference?
     var articlesList = [ArticlesData]()
     var articlesID = 0
-    
+    let spinner = UIActivityIndicatorView()
 
     @IBOutlet weak var articleImg: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
@@ -23,6 +23,12 @@ class DetailArticleViewController: UIViewController {
 //if selectArticle.id == articlesID
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        spinner.hidesWhenStopped = true
+        spinner.center = view.center
+        spinner.activityIndicatorViewStyle = .gray
+        spinner.startAnimating()
+        view.addSubview(spinner)
 
         refArticles = Database.database().reference().child("articles")
 
@@ -69,6 +75,8 @@ class DetailArticleViewController: UIViewController {
                         }
 
                     }
+                    self.spinner.stopAnimating()
+                    self.spinner.removeFromSuperview()
                 }
             }
         })

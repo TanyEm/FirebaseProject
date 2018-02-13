@@ -112,8 +112,8 @@
 				73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */,
 				7316EBAE2021FA680032342E /* CategoryTableViewCell.swift */,
 				73272FCE20260D1900299F0E /* ArticlesTableViewController.swift */,
-				73E92E08202B58E30071E9E2 /* DetailArticleViewController.swift */,
 				73272FD020260D4500299F0E /* ArticlesTableViewCell.swift */,
+				73E92E08202B58E30071E9E2 /* DetailArticleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

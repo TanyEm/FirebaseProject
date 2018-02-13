@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import FirebaseDatabase
 
 class ArticlesTableViewController: UITableViewController {
@@ -15,9 +14,16 @@ class ArticlesTableViewController: UITableViewController {
     var categoryID = 0
     var refArticles: DatabaseReference?
     var articlesList = [ArticlesData]()
+    let spinner = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        spinner.hidesWhenStopped = true
+        spinner.center = tableView.center
+        spinner.activityIndicatorViewStyle = .gray
+        spinner.startAnimating()
+        tableView.addSubview(spinner)
 
         refArticles = Database.database().reference().child("articles")
 
@@ -40,7 +46,6 @@ class ArticlesTableViewController: UITableViewController {
                     let articleVideo = articleObject?["video_link"]
                     let articleID = articleObject?["id"]
 
-
                     if Int(truncating: categoryID as! NSNumber) == self.categoryID {
                         //creating artist object with model and fetched values
                         let category = ArticlesData(title: articleTitle as! String?,
@@ -55,23 +60,20 @@ class ArticlesTableViewController: UITableViewController {
                         self.articlesList.append(category)
                     }
                 }
-
+                self.spinner.stopAnimating()
+                self.spinner.removeFromSuperview()
                 //reloading the tableview
                 self.tableView.reloadData()
 
             }
         })
-        
     }
 
     // MARK: - Table view data source
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return articlesList.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as! ArticlesTableViewCell
@@ -93,7 +95,6 @@ class ArticlesTableViewController: UITableViewController {
             cell.articleImage.layer.borderColor = UIColor.white.cgColor
             cell.articleImage.clipsToBounds = true
         }
-
         return cell
     }
     
