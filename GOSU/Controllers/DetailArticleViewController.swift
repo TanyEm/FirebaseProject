@@ -16,9 +16,14 @@ class DetailArticleViewController: UIViewController {
     var articlesID = 0
     let spinner = UIActivityIndicatorView()
 
+
+
     @IBOutlet weak var articleImg: UIImageView!
     @IBOutlet weak var articleTitle: UILabel!
     @IBOutlet weak var articleBody: UILabel!
+
+    @IBAction func writeComment(_ sender: Any) {
+    }
 
 //if selectArticle.id == articlesID
     override func viewDidLoad() {

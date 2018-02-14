@@ -302,7 +302,7 @@
                                                     <constraint firstAttribute="height" constant="156" id="o5F-E5-4Qd"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFo-Jz-RMo">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFo-Jz-RMo">
                                                 <rect key="frame" x="8" y="164" width="359" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -314,16 +314,26 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYA-YO-T4j">
+                                                <rect key="frame" x="8" y="222" width="359" height="30"/>
+                                                <state key="normal" title="Write a comment"/>
+                                                <connections>
+                                                    <action selector="writeComment:" destination="ae9-uo-QJe" eventType="touchUpInside" id="WCE-9M-f9l"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gxl-h5-vrK" firstAttribute="leading" secondItem="0Cy-Ck-Srg" secondAttribute="leading" id="7UL-pG-FzS"/>
                                             <constraint firstAttribute="trailing" secondItem="gxl-h5-vrK" secondAttribute="trailing" id="8fz-SF-oAb"/>
                                             <constraint firstItem="gxl-h5-vrK" firstAttribute="top" secondItem="0Cy-Ck-Srg" secondAttribute="top" id="Arp-p8-SZW"/>
+                                            <constraint firstItem="hYA-YO-T4j" firstAttribute="top" secondItem="DPo-gS-R49" secondAttribute="bottom" constant="8" id="EIR-ts-ovN"/>
+                                            <constraint firstAttribute="trailing" secondItem="hYA-YO-T4j" secondAttribute="trailing" constant="8" id="FdI-Qa-ixO"/>
                                             <constraint firstItem="HFo-Jz-RMo" firstAttribute="top" secondItem="gxl-h5-vrK" secondAttribute="bottom" constant="8" id="FgO-WE-qSv"/>
                                             <constraint firstItem="DPo-gS-R49" firstAttribute="leading" secondItem="0Cy-Ck-Srg" secondAttribute="leading" constant="8" id="Rdd-Uh-dpF"/>
                                             <constraint firstItem="DPo-gS-R49" firstAttribute="top" secondItem="HFo-Jz-RMo" secondAttribute="bottom" constant="8" id="SJC-R8-1oU"/>
                                             <constraint firstAttribute="trailing" secondItem="HFo-Jz-RMo" secondAttribute="trailing" constant="8" id="Vf6-ff-Oa1"/>
+                                            <constraint firstItem="hYA-YO-T4j" firstAttribute="leading" secondItem="0Cy-Ck-Srg" secondAttribute="leading" constant="8" id="bCj-Rz-y4D"/>
                                             <constraint firstAttribute="height" constant="1000" id="f18-EB-9Bw"/>
                                             <constraint firstAttribute="trailing" secondItem="DPo-gS-R49" secondAttribute="trailing" constant="8" id="hOJ-4t-T1j"/>
                                             <constraint firstItem="gxl-h5-vrK" firstAttribute="top" secondItem="0Cy-Ck-Srg" secondAttribute="top" id="kgn-W2-i5l"/>
