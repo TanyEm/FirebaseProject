@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>64624624937-4tko4r1hdcm3fpmfoaj3peotilumsfcd.apps.googleusercontent.com</string>
+	<string>536545607160-9ohk54022pp6sv3g3spgn53ckamd6b5j.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.64624624937-4tko4r1hdcm3fpmfoaj3peotilumsfcd</string>
+	<string>com.googleusercontent.apps.536545607160-9ohk54022pp6sv3g3spgn53ckamd6b5j</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBZ4ezFzDrFCsD_0YhUSLCF-JjwUaWxhBY</string>
+	<string>AIzaSyDdoCS9VLpZt8_WgBfzTuoyxC-RetjaZZg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>64624624937</string>
+	<string>536545607160</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.yops.GOSU</string>
+	<string>com.tanyem.FirebaseProject</string>
 	<key>PROJECT_ID</key>
-	<string>gosu-17138</string>
+	<string>fir-project-b8392</string>
 	<key>STORAGE_BUCKET</key>
-	<string>gosu-17138.appspot.com</string>
+	<string>fir-project-b8392.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:64624624937:ios:276c557352898988</string>
+	<string>1:536545607160:ios:5218583db3edf94d</string>
 	<key>DATABASE_URL</key>
-	<string>https://gosu-17138.firebaseio.com</string>
+	<string>https://fir-project-b8392.firebaseio.com</string>
 </dict>
 </plist>

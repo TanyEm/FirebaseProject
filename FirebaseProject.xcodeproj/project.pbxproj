@@ -16,7 +16,7 @@
 		734D8364201A53ED003C6FF1 /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */; };
 		734D8366201A54C4003C6FF1 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */; };
 		734D8368201A71F5003C6FF1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734D8367201A71F5003C6FF1 /* SettingsViewController.swift */; };
-		736B9E5F2018ABFB00CFCF79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */; };
+		73508865203C4F17009E445F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73508864203C4F17009E445F /* GoogleService-Info.plist */; };
 		736DE477201752740043D678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE476201752740043D678 /* AppDelegate.swift */; };
 		736DE479201752740043D678 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736DE478201752740043D678 /* LoginViewController.swift */; };
 		736DE47C201752740043D678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736DE47A201752740043D678 /* Main.storyboard */; };
@@ -52,9 +52,9 @@
 		734D8363201A53ED003C6FF1 /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8365201A54C4003C6FF1 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		734D8367201A71F5003C6FF1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		73508864203C4F17009E445F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		736B9E602018E8C100CFCF79 /* GOSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GOSU.entitlements; sourceTree = "<group>"; };
-		736DE473201752740043D678 /* GOSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		736DE473201752740043D678 /* FirebaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736DE476201752740043D678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		736DE478201752740043D678 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		736DE47B201752740043D678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		736DE480201752740043D678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736DE483201752740043D678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736DE485201752740043D678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		736DE48A201752760043D678 /* GOSUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOSUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		736DE48A201752760043D678 /* FirebaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		736DE48E201752760043D678 /* GOSUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOSUTests.swift; sourceTree = "<group>"; };
 		736DE490201752760043D678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73C074B1201F6553002DD5D5 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		736DE474201752740043D678 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				736DE473201752740043D678 /* GOSU.app */,
-				736DE48A201752760043D678 /* GOSUTests.xctest */,
+				736DE473201752740043D678 /* FirebaseProject.app */,
+				736DE48A201752760043D678 /* FirebaseProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 				736DE482201752740043D678 /* LaunchScreen.storyboard */,
 				736DE485201752740043D678 /* Info.plist */,
 				736DE47D201752740043D678 /* GOSU.xcdatamodeld */,
-				736B9E5E2018ABFB00CFCF79 /* GoogleService-Info.plist */,
+				73508864203C4F17009E445F /* GoogleService-Info.plist */,
 			);
 			path = GOSU;
 			sourceTree = "<group>";
@@ -185,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		736DE472201752740043D678 /* GOSU */ = {
+		736DE472201752740043D678 /* FirebaseProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 736DE493201752760043D678 /* Build configuration list for PBXNativeTarget "GOSU" */;
+			buildConfigurationList = 736DE493201752760043D678 /* Build configuration list for PBXNativeTarget "FirebaseProject" */;
 			buildPhases = (
 				1324B1F3FE07F55C880FD0E3 /* [CP] Check Pods Manifest.lock */,
 				736DE46F201752740043D678 /* Sources */,
@@ -200,14 +200,14 @@
 			);
 			dependencies = (
 			);
-			name = GOSU;
+			name = FirebaseProject;
 			productName = GOSU;
-			productReference = 736DE473201752740043D678 /* GOSU.app */;
+			productReference = 736DE473201752740043D678 /* FirebaseProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		736DE489201752760043D678 /* GOSUTests */ = {
+		736DE489201752760043D678 /* FirebaseProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 736DE496201752760043D678 /* Build configuration list for PBXNativeTarget "GOSUTests" */;
+			buildConfigurationList = 736DE496201752760043D678 /* Build configuration list for PBXNativeTarget "FirebaseProjectTests" */;
 			buildPhases = (
 				7D0DF10F33A3C06FA79E890B /* [CP] Check Pods Manifest.lock */,
 				736DE486201752760043D678 /* Sources */,
@@ -221,9 +221,9 @@
 			dependencies = (
 				736DE48C201752760043D678 /* PBXTargetDependency */,
 			);
-			name = GOSUTests;
+			name = FirebaseProjectTests;
 			productName = GOSUTests;
-			productReference = 736DE48A201752760043D678 /* GOSUTests.xctest */;
+			productReference = 736DE48A201752760043D678 /* FirebaseProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -248,7 +248,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -259,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 736DE46E201752730043D678 /* Build configuration list for PBXProject "GOSU" */;
+			buildConfigurationList = 736DE46E201752730043D678 /* Build configuration list for PBXProject "FirebaseProject" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -272,8 +272,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				736DE472201752740043D678 /* GOSU */,
-				736DE489201752760043D678 /* GOSUTests */,
+				736DE472201752740043D678 /* FirebaseProject */,
+				736DE489201752760043D678 /* FirebaseProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736DE484201752740043D678 /* LaunchScreen.storyboard in Resources */,
-				736B9E5F2018ABFB00CFCF79 /* GoogleService-Info.plist in Resources */,
+				73508865203C4F17009E445F /* GoogleService-Info.plist in Resources */,
 				736DE481201752740043D678 /* Assets.xcassets in Resources */,
 				736DE47C201752740043D678 /* Main.storyboard in Resources */,
 			);
@@ -448,7 +448,7 @@
 /* Begin PBXTargetDependency section */
 		736DE48C201752760043D678 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 736DE472201752740043D678 /* GOSU */;
+			target = 736DE472201752740043D678 /* FirebaseProject */;
 			targetProxy = 736DE48B201752760043D678 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -588,10 +588,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GOSU/GOSU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 33AJ5D27AP;
+				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.FirebaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -608,10 +608,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GOSU/GOSU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 33AJ5D27AP;
+				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = GOSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yops.GOSU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.FirebaseProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
@@ -633,7 +633,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOSU.app/GOSU";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirebaseProject.app/FirebaseProject";
 			};
 			name = Debug;
 		};
@@ -651,14 +651,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GOSU.app/GOSU";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirebaseProject.app/FirebaseProject";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		736DE46E201752730043D678 /* Build configuration list for PBXProject "GOSU" */ = {
+		736DE46E201752730043D678 /* Build configuration list for PBXProject "FirebaseProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				736DE491201752760043D678 /* Debug */,
@@ -667,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		736DE493201752760043D678 /* Build configuration list for PBXNativeTarget "GOSU" */ = {
+		736DE493201752760043D678 /* Build configuration list for PBXNativeTarget "FirebaseProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				736DE494201752760043D678 /* Debug */,
@@ -676,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		736DE496201752760043D678 /* Build configuration list for PBXNativeTarget "GOSUTests" */ = {
+		736DE496201752760043D678 /* Build configuration list for PBXNativeTarget "FirebaseProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				736DE497201752760043D678 /* Debug */,
