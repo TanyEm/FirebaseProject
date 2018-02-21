@@ -8,15 +8,39 @@
 
 import UIKit
 import CoreData
+import Firebase
+import GoogleSignIn
+import FirebaseDatabase
+import FirebaseAuth
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
-
+    var databaseRef: DatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+
+        // iOS 10 or later support
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound], completionHandler: { (granted, error) in })
+            application.registerForRemoteNotifications()
+        }
+        // iOS else support
+        else {
+            let notificationSettings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(notificationSettings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+
         return true
     }
 
@@ -43,6 +67,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+
+    // MARK: - Firabase and GoogleSignIn
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url,
+                                        sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                        annotation: [:])
+    }
+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        print("User signed into Google")
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            // User is signed in
+            print("User signed into Firabase")
+            self.databaseRef = Database.database().reference()
+
+            // Configure database
+            self.databaseRef.child("user_profiles").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                let snapshot = snapshot.value as? NSDictionary
+
+                if snapshot == nil {
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(user?.displayName)
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(user?.email)
+                    self.databaseRef.child("user_profiles").child(user!.uid).child("phone_num").setValue("")
+                }
+                // Create Segue fore signing with Google
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                self.window?.rootViewController?.performSegue(withIdentifier: "GoogleViewSegue", sender: nil)
+                
+            })
+
+        }
+
+    }
+
+
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+
+
 
     // MARK: - Core Data stack
 
