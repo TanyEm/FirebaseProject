@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,12 +26,12 @@
                                 </constraints>
                                 <state key="normal" title="Use without authorization"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-ab-PlG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseProject" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-ab-PlG">
                                 <rect key="frame" x="20" y="40" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3wj-Gv-8qp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -114,7 +114,7 @@
         <!--Settings-->
         <scene sceneID="Fej-x3-wtU">
             <objects>
-                <viewController title="Settings" id="7uY-vg-pfQ" customClass="SettingsViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="7uY-vg-pfQ" customClass="SettingsViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkg-er-NcD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,13 +143,13 @@
         <!--Categories Table View Controller-->
         <scene sceneID="K9R-AB-9Z3">
             <objects>
-                <tableViewController id="whH-QT-YOn" customClass="CategoriesTableViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="whH-QT-YOn" customClass="CategoriesTableViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1wb-iW-dLt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="99" id="R9e-FC-5Sd" customClass="CategoryTableViewCell" customModule="GOSU" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="99" id="R9e-FC-5Sd" customClass="CategoryTableViewCell" customModule="FirebaseProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9e-FC-5Sd" id="lLb-JP-3fB">
@@ -216,13 +216,13 @@
         <!--Articles Table View Controller-->
         <scene sceneID="DjB-t1-J9P">
             <objects>
-                <tableViewController id="jI1-ad-gRF" customClass="ArticlesTableViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jI1-ad-gRF" customClass="ArticlesTableViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="acR-6a-ZNx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="108" id="z94-UJ-sIC" customClass="ArticlesTableViewCell" customModule="GOSU" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleCell" rowHeight="108" id="z94-UJ-sIC" customClass="ArticlesTableViewCell" customModule="FirebaseProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="108"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z94-UJ-sIC" id="xbM-IF-acc">
@@ -285,7 +285,7 @@
         <!--Detail Article View Controller-->
         <scene sceneID="hsO-tu-H5h">
             <objects>
-                <viewController id="ae9-uo-QJe" customClass="DetailArticleViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ae9-uo-QJe" customClass="DetailArticleViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0sl-ZU-aUi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +376,7 @@
         <!--Phone Verification View Controller-->
         <scene sceneID="0cW-YI-qLA">
             <objects>
-                <viewController id="cUx-WH-iQ9" customClass="PhoneVerificationViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cUx-WH-iQ9" customClass="PhoneVerificationViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7cu-WS-K9l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -426,7 +426,7 @@
         <!--Code Verification View Controller-->
         <scene sceneID="0Bf-MD-iAN">
             <objects>
-                <viewController id="FJ8-FQ-VCY" customClass="CodeVerificationViewController" customModule="GOSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FJ8-FQ-VCY" customClass="CodeVerificationViewController" customModule="FirebaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Uu-Uf-EWD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

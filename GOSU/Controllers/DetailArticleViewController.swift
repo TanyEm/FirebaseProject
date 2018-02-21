@@ -1,6 +1,6 @@
 //
 //  DetailArticleViewController.swift
-//  GOSU
+//  FirebaseProject
 //
 //  Created by Tanya Tomchuk on 07/02/2018.
 //  Copyright © 2018 Tanya Tomchuk. All rights reserved.

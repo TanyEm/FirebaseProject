@@ -1,6 +1,6 @@
 //
 //  ArticleCategoriesTableViewController.swift
-//  GOSU
+//  FirebaseProject
 //
 //  Created by Tanya Tomchuk on 29/01/2018.
 //  Copyright © 2018 Tanya Tomchuk. All rights reserved.
